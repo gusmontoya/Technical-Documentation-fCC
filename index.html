@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Introduction to Git</title>
 </head>
 <body>
     <nav id="navbar">
-        <header>Git Documentation</header>
+      <span class="toggle_icon">☰</span>
+      <div class="logo_wrapper">
+        <img class="logo" src="https://serengetitech.com/wp-content/uploads/2020/12/how-works-git-logo.jpg" alt="git-logo-green">
+        <header>
+          Git Documentation
+        </header>
+      </div>
         <ul>
             <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#repository">What is a Repository</a></li>
-            <li><a class="nav-link" href="#getting-started">Getting started</a></li>
-            <li><a class="nav-link" href="#exercises1">Exercises</a></li>
-            <li><a class="nav-link" href="#basicCommands">basic Git commands</a></li>
-            <li><a class="nav-link" href="#gitFlow">The GitHub flow</a></li>
-            <!-- Blow are future add ons -->
+            <li><a class="nav-link" href="#What_is_a_Repository_?">What is a Repository?</a></li>
+            <li><a class="nav-link" href="#Getting_started">Getting started</a></li>
+            <li><a class="nav-link" href="#exercise">Exercise</a></li>
+            <li><a class="nav-link" href="#Basic_Git_commands">Basic Git commands</a></li>
+            <li><a class="nav-link" href="#The_GitHub_flow">The GitHub flow</a></li>
+            <!-- Below are future add ons -->
             <!-- <li><a class="nav-link" href="#exercises2">Exercises</a></li>
             <li><a class="nav-link" href="#viewing">Viewing the diff</a></li>
             <li><a class="nav-link" href="#exercises3">Exercises</a></li>
@@ -27,8 +34,9 @@
     <main id="main-doc">
         <section class="main-section" id="Introduction">
             <header>Introduction</header>
+            <h4>What is a Version Control System (VCS)</h4>
+            <hr>
             <article>
-              <h2>What is a Version Control System (VCS)</h2>
               <p>
                 A version control system, or VCS, provides an automatic way to track changes in software projects, 
                 giving creators the power to view previous versions of files and directories, develop speculative 
@@ -36,6 +44,7 @@
                 collaborate easily and conveniently with others. In addition, using version control also makes 
                 deploying production websites and web applications much easier.
               </p>
+              <br>
               <p>
                 Version control has evolved considerably over the years. The family line leading to Git 
                 includes programs called RCS, CVS, and Subversion, and there are many current alternatives 
@@ -46,6 +55,7 @@
                 in the open-source VCS wars: Git. This, tutorial will provide a useful introduction to the 
                 subject.
               </p>
+              <br>
               <p>
                 Originally developed by Linux creator Linus Torvalds to host the Linux kernel, Git is a command-line
                 program that is designed in the Unix tradition (which is why a familiarity with the Unix command line
@@ -53,11 +63,13 @@
                 it few rivals, but it can be tricky to learn, and other Git tutorials have a tendency to introduce 
                 lots of heavy theory, which can be interesting to learn but in practice is really only understood by a 
                 tiny handful of Git users.
-              </p>               
+              </p>
+              <br>               
               <p> 
                 The reason why Git is essential to learn, is it's widely accepted among developers and 
                 companies. Over 70% of developers use Git, making it the most used VCS in the world. Git
-                is used for both open source and commercial software development.</p>
+                is used for both open source and commercial software development.</p> 
+                <br>
                   <ul>
                       <li>
                           Git lets developers see the entire timeline of their changes, decisions, and 
@@ -65,21 +77,25 @@
                           of a project, the developer has all the context they need to understand it and 
                           start contributing.
                       </li>
+                      <br>
                       <li>
                           Developers work in every time zone. With a DVCS like Git, collaboration can happen
                           any time while maintaining source code integrity. Using branches, developers can 
                           safely propose changes to production code.
                       </li>
+                      <br>
                       <li>Businesses using Git can break down communication barriers between teams and keep 
                           them focused on doing their best work. Plus, Git makes it possible to align experts 
                           across a business to collaborate on major projects.
                       </li>
+                      <br>
                   </ul>
             </article>
         </section>
 
-        <section class="main-section" id="repository">
-          <header>What is a repository?</header>
+        <section class="main-section" id="What_is_a_Repository">
+          <header>What is a Repository</header>
+          <hr>
             <article>
               <p>
                 A repository, or Git project, encompasses the entire collection of files and folders associated with a 
@@ -90,77 +106,90 @@
                 or other ease-of-use interfaces, a git repository also allows for: interaction with the history, cloning, 
                 creating branches, committing, merging, comparing changes across versions of code, and more.
               </p>
+              <br>
               <p>
                 Working in repositories keeps development projects organized and protected. Developers are encouraged to 
                 fix bugs, or create fresh features, without fear of derailing mainline development efforts. Git facilitates 
                 this through the use of topic branches: lightweight pointers to commits in history that can be easily created 
                 and deprecated when no longer needed.
               </p>
+              <br>
               <p>
                 Through platforms like GitHub, Git also provides more opportunities for project transparency and collaboration. 
                 Public repositories help teams work together to build the best possible final product.
               </p>
+              <br>
             </article>
         </section>
-        <section class="main-section" id="getting-started">
+
+        <section class="main-section" id="Getting_started">
             <header>Getting started</header>
+            <hr> 
             <article>
               To get started using Git, we need to install it on our systems, to do so follow these instructions:
+              <br>
               <ol>
-                <li><h2>Downloading Git</h2>
+                <li><h4>Downloading Git</h4>
+                  <br>
                     Go to <a href="http://git-scm.com/" target="_blank">git website</a> and download the appropriate 
                     git version. Within the website you will also find installation guides to use. 
                 </li>
-                <li><h2>Configuring Git</h2>
+                <br>
+                <li><h4>Configuring Git</h4>
+                  <br>
                     The next thing you'll want to do is to configure your name and email on Git. Git needs your 
                     identity to document the contributor whenever there is a change to the code. The two commands are 
                     as follows:
-                    <code>$ git config --global user.name "Billy Programmer"</code>
-                    <code>$ git config --global user.email "bprogrammer123@terpmail.umd.edu"</code>
+                    <code id="codeBlock">$ git config --global user.name "Billy Programmer"</code>
+                    <code id="codeBlock">$ git config --global user.email "bprogrammer123@terpmail.umd.edu"</code>
                 </li>
-                <li><h2>Creating or Cloning a Git Repository</h2>
+                <br>
+                <li><h4>Creating or Cloning a Git Repository</h4>
+                  <br>
                     To turn a project into a Git repository, go inside the project folder and type the command
-                    <br>
-                    <code>$ git init</code>
+                    <code id="codeInline">git init</code>
                     to create a new Git repository. A folder to track history will be created, although there will be 
                     no other changes to your repository. If you want to clone an existing Git repository and you know 
-                    the location of the respository, you can easily make a copy of the repository into your current 
-                    irectory:
-                    <br>
-                    <code>$ git clone bprogrammer@linux.grace.umd.edu:~/216/project1</code>
+                    the location of the repository, you can easily make a copy of the repository into your current 
+                    directory:
+                  <br>
+                    <code id="codeBlock">$ git clone bprogrammer@linux.grace.umd.edu:~/216/project1</code>
                     So if we wanted to do Project 1 under version control, we would want to simply convert it into a Git 
                     repository after copying over the files.
-                    <br>
-                    <code>$ cp -r ~/216public/projects/project1 ~/216
+                    <code id="codeBlock">$ cp -r ~/216public/projects/project1 ~/216
                     $ cd ~/216/project1
                     $ git init</code>
+                    
                 </li>
+                
               </ol>
             </article>
           </section>
 
-          <section class="main-section" id="exercises1">
-            <header>Exercises</header>
+          <section class="main-section" id="exercise">
+            <header>Exercise</header>
+            <hr> 
                 <article>
                   <ol>
                     <li>
-                      <p>Run <code>git help</code> at the command line. What is the first command listed?</p>
+                      <p>Run <code id="codeInline">git help</code> at the command line. What is the first command listed?</p>
                     </li>
                     <li>
-                        There’s a chance that the full output of <code>git help</code> was too big to fit in your terminal, with most of it 
-                        just scrolling by. What’s the command to let us navigate the output of <code>git help</code> interactively? Hint: Pipe 
-                        the output to <code>less</code>.
+                        There’s a chance that the full output of <code id="codeInline">git help</code> was too big to fit in your terminal, with most of it 
+                        just scrolling by. What’s the command to let us navigate the output of <code id="codeInline">git help</code> interactively? Hint: Pipe 
+                        the output to <code id="codeInline">less</code>.
                     </li>
                     <li>
                         Git stores global configuration settings in a hidden text file located in your home directory. By inspecting the 
-                        file <code>~/.gitconfig</code> with a tool of your choice (<code>cat, less,</code> a text editor, etc.).
+                        file <code id="codeInline">~/.gitconfig</code> with a tool of your choice (<code id="codeInline">cat, less,</code> a text editor, etc.).
                 </li>
               </ol>
             </article>
           </section>
 
-          <section class="main-section" id="basicCommands">
+          <section class="main-section" id="Basic_Git_commands">
             <header>Basic Git commands</header>
+            <hr>
                 <article>
                   <p>
                     To use Git, developers use specific commands to copy, create, change, and combine code. These commands can be executed 
@@ -169,39 +198,39 @@
                   </p>
                   <ul>
                     <li>
-                      <code>git init</code> initializes a brand new Git repository and begins tracking an existing directory. It adds a hidden
+                      <code id="codeInline">git init</code> initializes a brand new Git repository and begins tracking an existing directory. It adds a hidden
                         subfolder within the existing directory that houses the internal data structure required for version control.
                     </li>
                     <li>
-                      <code>git clone</code> creates a local copy of a project that already exists remotely. The clone includes all the project’s files, history, 
+                      <code id="codeInline">git clone</code> creates a local copy of a project that already exists remotely. The clone includes all the project’s files, history, 
                         and branches.
                     </li>
                     <li>
-                      <code>git add</code> stages a change. Git tracks changes to a developer’s codebase, but it’s necessary to stage and take a snapshot of the 
+                      <code id="codeInline">git add</code> stages a change. Git tracks changes to a developer’s codebase, but it’s necessary to stage and take a snapshot of the 
                         changes to include them in the project’s history. This command performs staging, the first part of that two-step process. Any 
                         changes that are staged will become a part of the next snapshot and a part of the project’s history. Staging and committing 
                         separately gives developers complete control over the history of their project without changing how they code and work.
                     </li>
                     <li>
-                      <code>git commit</code> saves the snapshot to the project history and completes the change-tracking process. In short, a commit functions 
-                        like taking a photo. Anything that’s been staged with <code>git add</code> will become a part of the snapshot with <code>git commit</code>.
+                      <code id="codeInline">git commit</code> saves the snapshot to the project history and completes the change-tracking process. In short, a commit functions 
+                        like taking a photo. Anything that’s been staged with <code id="codeInline">git add</code> will become a part of the snapshot with <code id="codeInline">git commit</code>.
                     </li>
                     <li>
-                      <code>git status</code>shows the status of changes as untracked, modified, or staged.
+                      <code id="codeInline">git status</code>shows the status of changes as untracked, modified, or staged.
                     </li>
                     <li>
-                      <code>git branch</code> shows the branches being worked on locally.
+                      <code id="codeInline">git branch</code> shows the branches being worked on locally.
                     </li>
                     <li>
-                      <code>git merge</code> merges lines of development together. This command is typically used to combine changes made on two distinct branches. 
+                      <code id="codeInline">git merge</code> merges lines of development together. This command is typically used to combine changes made on two distinct branches. 
                         For example, a developer would merge when they want to combine changes from a feature branch into the main branch for deployment.
                     </li>
                     <li>
-                      <code>git pull</code> updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate 
+                      <code id="codeInline">git pull</code> updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate 
                         has made commits to a branch on a remote, and they would like to reflect those changes in their local environment.
                     </li>
                     <li>
-                      <code>git push</code> updates the remote repository with any commits made locally to a branch.
+                      <code id="codeLine">git push</code> updates the remote repository with any commits made locally to a branch.
                     </li>
               </ol>
               <p>Learn more <a 
@@ -210,32 +239,34 @@
               >from a full reference guide to Git commands</a>.</p>
             </article>
           </section>
-          <section class="main-section" id="gitFlow">
+
+          <section class="main-section" id="The_GitHub_flow">
             <header>The GitHub flow</header>
+            <hr>
               <article>
                   <p>The GitHub flow is a lightweight, branch-based workflow built around core Git commands used by teams around the globe—including ours.</p>
                   <p>The GitHub flow has six steps, each with distinct benefits when implemented:</p>
                     <ul>
                       <li>
-                          Create a branch: Topic branches created from the canonical deployment branch (usually main) allow teams to contribute to many parallel efforts. 
+                          <strong>Create a branch:</strong>Topic branches created from the canonical deployment branch (usually main) allow teams to contribute to many parallel efforts. 
                           Short-lived topic branches, in particular, keep teams focused and results in quick ships.
                       </li>
                       <li>
-                          Add commits: Snapshots of development efforts within a branch create safe, revertible points in the project’s history.
+                        <strong>Add commits:</strong>Snapshots of development efforts within a branch create safe, revertible points in the project’s history.
                       </li>
                       <li>
-                          Open a pull request: Pull requests publicize a project’s ongoing efforts and set the tone for a transparent development process.
+                        <strong>Open a pull request:</strong>Pull requests publicize a project’s ongoing efforts and set the tone for a transparent development process.
                       </li>
                       <li>
-                          Discuss and review code: Teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the core 
+                        <strong>Discuss and review code:</strong>Teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the core 
                           of an open and participatory culture.
                       </li>
                       <li>
-                          Merge: Upon clicking merge, GitHub automatically performs the equivalent of a local ‘git merge’ operation. GitHub also keeps the entire branch 
+                        <strong>Merge:</strong>Upon clicking merge, GitHub automatically performs the equivalent of a local ‘git merge’ operation. GitHub also keeps the entire branch 
                           development history on the merged pull request.
                       </li>
                       <li>
-                          Deploy: Teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the 
+                        <strong>Deploy:</strong>Teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the 
                           deployment branch has gone through a robust workflow.
                       </li>
                     </ul>
@@ -244,6 +275,7 @@
           
           <section class="main-section" id="Reference">
             <header>Reference</header>
+            
             <article>
               <ul>
                 <li>
@@ -260,6 +292,6 @@
             </article>
           </section>
     </main>
-
+    <!-- <script src="myscripts.js"></script> -->
 </body>
 </html>

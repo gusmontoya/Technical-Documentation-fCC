@@ -11,3 +11,171 @@
 *:before {
   box-sizing: border-box;
 }
+
+body {
+  font: 0.9rem "Open Sans";
+  padding: 0;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+header {
+  font-size: 1.5em;
+}
+
+hr {
+  margin-bottom: 2em;
+  color: #ccc;
+  border: none;
+  border-bottom: thin solid #ccc;
+}
+
+a {
+  color:#6D9C4C;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h2 {
+  padding: 1em;
+}
+
+.main-section {
+  display: block;
+  justify-content: space-between;
+}
+code {
+  background: rgb(238, 238, 238);
+  border-radius: 4px;
+  color: #333;
+  /* display: block; */
+  font-family: monospace;
+  margin: 1em 0;
+  padding: .2em .5em .2em .5em;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+code .tag {
+    color: #6D9C4C;
+}
+
+code .comment {
+    color: #aaa;
+}
+code .tag {
+    color: #487;
+}
+
+#codeBlock {
+  display: block;
+}
+#navbar {
+  overflow-x: hidden;
+  background: rgb(238, 238, 238);
+  position: fixed;
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+#navbar .toggle_icon {
+  position: fixed;
+  z-index: -1;
+}
+#navbar .logo_wrapper {
+  position: sticky;
+  top: 0;
+  background: inherit;
+}
+#navbar .logo {
+  max-width: 48%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+#navbar header {
+  text-align: center;
+  padding: 0.5em 0 1em;
+  border-bottom: thin solid #aaa;
+}
+#navbar > ul {
+  padding: 0;
+  margin-top: 0;
+}
+#navbar ul li {
+  list-style: none;
+  width: 100%;
+}
+#navbar ul li > a {
+  padding: 1em 0 1em 1em;
+  display: block;
+  text-decoration: none;
+  color: #6D9C4C;
+}
+#navbar ul li > a:hover {
+  background: rgba(black, 0.1);
+}
+
+#main-doc {
+  padding: 2em 5em;
+  width: 80%;
+  float: right;
+  background: #fefefe;
+  height: 100%;
+}
+#main-doc header {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#Introduction {
+  display: block;
+  justify-content: space-between;
+}
+@media screen and (max-width: 60rem) {
+  #navbar {
+    width: 40%;
+  }
+  #main-doc {
+    width: 60%;
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .toggle_icon {
+    background: rgba(white, 0.8);
+    border: thin solid #6D9C4C;
+    border-radius: 2px;
+    color: #6D9C4C;
+    cursor: pointer;
+    font-size: 1.7rem;
+    left: 0.5em;
+    padding: 0.3em;
+    position: fixed;
+    top: 0.3em;
+    transition: left 0.3s ease;
+    z-index: 3; 
+  }
+
+#navbar {
+  transition: left 0.3s ease;
+  left: -100%;
+  width: 80%;
+  box-shadow: 4px 1px 13px #bbb;
+}
+#navbar.logo {
+  padding: 1em 0 0 0.8em;
+}
+#navbar header {
+  padding: 0.4em 0 0.8em;
+  font-size: 1.3em;
+}
+#navbar.open {
+  left:0%;
+} 
+
+#main-doc {
+  width: 100%;
+  padding: 2.4em 1em 1em 1em;
+}
+}
