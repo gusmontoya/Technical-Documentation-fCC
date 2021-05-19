@@ -17,14 +17,16 @@
         </header>
       </div>
         <ul>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#What_is_a_Repository_?">What is a Repository?</a></li>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#What_is_a_Repository?">What is a Repository?</a></li>
             <li><a class="nav-link" href="#Getting_started">Getting started</a></li>
-            <li><a class="nav-link" href="#exercise">Exercise</a></li>
+            <li><a class="nav-link" href="#Exercise">Exercise</a></li>
             <li><a class="nav-link" href="#Basic_Git_commands">Basic Git commands</a></li>
             <li><a class="nav-link" href="#The_GitHub_flow">The GitHub flow</a></li>
+            <li><a class="nav-link" href="#GitHub_and_the_command_line">GitHub and the command line</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
             <!-- Below are future add ons -->
-            <!-- <li><a class="nav-link" href="#exercises2">Exercises</a></li>
+            <!--
             <li><a class="nav-link" href="#viewing">Viewing the diff</a></li>
             <li><a class="nav-link" href="#exercises3">Exercises</a></li>
             <li><a class="nav-link" href="#Reference">Reference</a></li> -->
@@ -93,8 +95,8 @@
             </article>
         </section>
 
-        <section class="main-section" id="What_is_a_Repository">
-          <header>What is a Repository</header>
+        <section class="main-section" id="What_is_a_Repository?">
+          <header>What is a Repository?</header>
           <hr>
             <article>
               <p>
@@ -166,7 +168,7 @@
             </article>
           </section>
 
-          <section class="main-section" id="exercise">
+          <section class="main-section" id="Exercise">
             <header>Exercise</header>
             <hr> 
                 <article>
@@ -174,15 +176,18 @@
                     <li>
                       <p>Run <code id="codeInline">git help</code> at the command line. What is the first command listed?</p>
                     </li>
+                    <br>
                     <li>
                         There’s a chance that the full output of <code id="codeInline">git help</code> was too big to fit in your terminal, with most of it 
                         just scrolling by. What’s the command to let us navigate the output of <code id="codeInline">git help</code> interactively? Hint: Pipe 
                         the output to <code id="codeInline">less</code>.
                     </li>
+                    <br>
                     <li>
                         Git stores global configuration settings in a hidden text file located in your home directory. By inspecting the 
                         file <code id="codeInline">~/.gitconfig</code> with a tool of your choice (<code id="codeInline">cat, less,</code> a text editor, etc.).
-                </li>
+                    </li>
+                    <br>
               </ol>
             </article>
           </section>
@@ -196,42 +201,52 @@
                     directly from the command line or by using an application like GitHub Desktop or Git Kraken. Here are some common commands 
                     for using Git. Please read through them first.:
                   </p>
+                  <br>
                   <ul>
                     <li>
                       <code id="codeInline">git init</code> initializes a brand new Git repository and begins tracking an existing directory. It adds a hidden
                         subfolder within the existing directory that houses the internal data structure required for version control.
                     </li>
+                    <br>
                     <li>
                       <code id="codeInline">git clone</code> creates a local copy of a project that already exists remotely. The clone includes all the project’s files, history, 
                         and branches.
                     </li>
+                    <br>
                     <li>
                       <code id="codeInline">git add</code> stages a change. Git tracks changes to a developer’s codebase, but it’s necessary to stage and take a snapshot of the 
                         changes to include them in the project’s history. This command performs staging, the first part of that two-step process. Any 
                         changes that are staged will become a part of the next snapshot and a part of the project’s history. Staging and committing 
                         separately gives developers complete control over the history of their project without changing how they code and work.
                     </li>
+                    <br>
                     <li>
                       <code id="codeInline">git commit</code> saves the snapshot to the project history and completes the change-tracking process. In short, a commit functions 
                         like taking a photo. Anything that’s been staged with <code id="codeInline">git add</code> will become a part of the snapshot with <code id="codeInline">git commit</code>.
                     </li>
+                    <br>
                     <li>
                       <code id="codeInline">git status</code>shows the status of changes as untracked, modified, or staged.
                     </li>
+                    <br>
                     <li>
                       <code id="codeInline">git branch</code> shows the branches being worked on locally.
                     </li>
+                    <br>
                     <li>
                       <code id="codeInline">git merge</code> merges lines of development together. This command is typically used to combine changes made on two distinct branches. 
                         For example, a developer would merge when they want to combine changes from a feature branch into the main branch for deployment.
                     </li>
+                    <br>
                     <li>
                       <code id="codeInline">git pull</code> updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate 
                         has made commits to a branch on a remote, and they would like to reflect those changes in their local environment.
                     </li>
+                    <br>
                     <li>
                       <code id="codeLine">git push</code> updates the remote repository with any commits made locally to a branch.
                     </li>
+                    <br>
               </ol>
               <p>Learn more <a 
                 href="https://git-scm.com/docs" 
@@ -246,30 +261,121 @@
               <article>
                   <p>The GitHub flow is a lightweight, branch-based workflow built around core Git commands used by teams around the globe—including ours.</p>
                   <p>The GitHub flow has six steps, each with distinct benefits when implemented:</p>
+                  <br>
                     <ul>
                       <li>
                           <strong>Create a branch:</strong>Topic branches created from the canonical deployment branch (usually main) allow teams to contribute to many parallel efforts. 
                           Short-lived topic branches, in particular, keep teams focused and results in quick ships.
                       </li>
+                      <br>
                       <li>
                         <strong>Add commits:</strong>Snapshots of development efforts within a branch create safe, revertible points in the project’s history.
                       </li>
+                      <br>
                       <li>
                         <strong>Open a pull request:</strong>Pull requests publicize a project’s ongoing efforts and set the tone for a transparent development process.
                       </li>
+                      <br>
                       <li>
                         <strong>Discuss and review code:</strong>Teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the core 
                           of an open and participatory culture.
                       </li>
+                      <br>
                       <li>
                         <strong>Merge:</strong>Upon clicking merge, GitHub automatically performs the equivalent of a local ‘git merge’ operation. GitHub also keeps the entire branch 
                           development history on the merged pull request.
                       </li>
+                      <br>
                       <li>
                         <strong>Deploy:</strong>Teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the 
                           deployment branch has gone through a robust workflow.
                       </li>
+                      <br>
                     </ul>
+              </article>
+          </section>
+
+          <section class="main-section" id="GitHub_and_the_command_line">
+            <header>GitHub and the command line</header>
+            <hr> 
+              <article>
+                  <p>
+                    For developers new to the command line, the GitHub Training team has put together a series of <a 
+                    href="https://docs.github.com/en/github/getting-started-with-github/quickstart/git-and-github-learning-resources" 
+                    target="_blank"
+                    >tutorials</a> 
+                    on Git commands to guide the way. Sometimes, a series of commands can paint a picture of how to use Git:
+                  </p>
+                  <br>
+                  <h4>Example: Contribute to an existing repository</h4>
+                  <p><code id="codeBlock">
+                      # download a repository on GitHub.com to our machine
+                      
+                      git clone https://github.com/me/repo.git
+                      
+                      # change into the `repo` directory cd repo
+                      
+                      # create a new branch to store any new changes git branch my-branch
+                      
+                      # switch to that branch (line of development) git checkout my-branch
+                      
+                      # make changes, for example, edit `file1.md` and `file2.md` using the text editor
+                      
+                      # stage the changed files git add file1.md file2.md
+                      
+                      # take a snapshot of the staging area (anything that's been added) git commit -m "my snapshot"
+                      
+                      # push changes to github git push --set-upstream origin my-branch
+                      </code></p>
+            <header>Example: Start a new repository and publish it to GitHub</header>
+            <hr>
+              <article>
+                  <p>
+                    First, you will need to create a new repository on GitHub. You can learn how to create a new repository in our <a 
+                    href="https://guides.github.com/activities/hello-world/#repository" 
+                    target="_blank"
+                    >Hello World guide</a>.  
+                    <strong>Do not</strong>  initialize the repository with a README, .gitignore or License. This empty repository will await your code.
+                  </p>
+                  <br>
+                  <p><code id="codeBlock">
+                    # create a new directory, and initialize it with git-specific functions git init my-repo
+                  
+                    # change into the `my-repo` directory cd my-repo
+                  
+                    # create the first file in the project touch README.md
+                  
+                    # git isn't aware of the file, stage it git add README.md
+                  
+                    # take a snapshot of the staging area git commit -m "add README to initial commit"
+                  
+                    # provide the path for the repository you created on github git remote add origin 
+                    https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+                  
+                    # push changes to github git push --set-upstream origin main
+                  </code></p>
+              </article>
+
+            <header>Example: contribute to an existing branch on GitHub</header>
+            <hr>
+              </article>
+                  <p><code id="codeBlock">
+                    # assumption: a project called `repo` already exists on the machine, and a new branch has been pushed to GitHub.com since the last time changes were made locally
+                  
+                    # change into the `repo` directory cd repo
+                  
+                    # update all remote tracking branches, and the currently checked out branch git pull
+                  
+                    # change into the existing branch called `feature-a` git checkout feature-a
+                  
+                    # make changes, for example, edit `file1.md` using the text editor
+                  
+                    # stage the changed file git add file1.md
+                  
+                    # take a snapshot of the staging area git commit -m "edit file1"
+                  
+                    # push changes to github git push
+                  </code></p>
               </article>
           </section>
           
